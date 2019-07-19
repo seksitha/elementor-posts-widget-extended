@@ -1,31 +1,17 @@
-# Elementor Hello World Sample Plugin
+# Extended Elementor posts widget with Ajax AngularJs
+## How the project born
+I was so impressed with elementor page builder when I asked for the first time to migrate a website from a friend of mind to WordPress.  But after working with it for 2 days to build up the site and found a few bugs and lack of feature even we had the pro version with posts widget. To my curiosity, Why not fixing that bugs and add my own needs. After three weeks, from knowing nothing to a fully custom plugin :smiley: 
 
-This is a sample plugin to demonstrate how you can write extentions (plugins) to add custom functionality to [Elementor](https://github.com/pojome/elementor/)
+## I'm open for the job opportunity as a self-taught :bowtie:
+I’m a self-taught. So this is a learning experience and it is a really satisfying result. Printing 3000 lines of code trying to understand the widget from the ground up and using AngularJS to add functionality. This is what I like to do. 
+contact me if you curious about who I am as a coder : seksitha@gmail.com.
 
-Plugin Structure: 
-```
-assets/
-      /js   
-      /css  Holds plugin CSS Files
-      
-widgets/
-      /hello-world.php
-      /inline-editing.php
-      
-index.php
-elementor-hello-world.php
-plugin.php
-```
+## Enought talking let's get to widget
+
+you can just download the project file with the zip file and install it to your Wordpress site. 
+
+### A video demonstrate the plugin L :stuck_out_tongue_winking_eye:
+
+[![Alt text](https://img.youtube.com/vi/VID/0.jpg)](https://www.youtube.com/watch?v=GFzOiX4XlA4&list=LLQlydY78x6PTqUq5LKDPuUg)
 
 
-* `assets` directory - holds plugin JavaScript and CSS assets
-  * `/js` directory - Holds plugin Javascript Files
-  * `/css` directory - Holds plugin CSS Files
-* `widgets` directory - Holds Plugin widgets
-  * `/hello-world.php` - Hello World demo Widget class
-  * `/inline-editing.php` - Inline Editing demo Widget class
-* `index.php`	- Prevent direct access to directories
-* `elementor-hello-world.php`	- Main plugin file, used as a loader if plugin minimum requirements are met.
-* `plugin.php` - The actual Plugin file/Class.
-
-For more documentation please see [Elementor Developers Resource](https://developers.elementor.com/creating-an-extension-for-elementor/).
