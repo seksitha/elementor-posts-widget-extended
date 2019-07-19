@@ -13,7 +13,7 @@ you can just download the project file with the zip file and install it to your 
 
 ### A video demo the plugin LOL :stuck_out_tongue_winking_eye:
 
-<div align="center">
+<div align="left">
   <a href=http://www.youtube.com/watch?v=GFzOiX4XlA4" >
     <img src="http://img.youtube.com/vi/GFzOiX4XlA4/0.jpg" alt="demo">
   </a>
