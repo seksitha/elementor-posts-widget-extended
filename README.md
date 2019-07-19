@@ -11,7 +11,7 @@ contact me if you curious about who I am as a coder : seksitha@gmail.com.
 you can just download the project file with the zip file and install it to your Wordpress site. If you like it please star it. and please give feedback and report issue if any.
 
 
-### A video demonstrate the plugin LOL :stuck_out_tongue_winking_eye:
+### A video demo the plugin LOL :stuck_out_tongue_winking_eye:
 
 <div align="center">
   <a href=http://www.youtube.com/watch?v=GFzOiX4XlA4" >
