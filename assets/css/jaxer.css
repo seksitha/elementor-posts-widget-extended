@@ -1,0 +1,22 @@
+
+
+#loader {
+    position: relative;
+}
+
+#loader div{
+    text-align: center;
+    position: absolute;
+    top:50%;
+    left:47%;
+}
+
+/* .sitha-3000{
+    animation-duration: 3s;
+} */
+.current, .disabled {
+    cursor: default;
+
+}
+
+
