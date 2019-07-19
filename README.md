@@ -13,6 +13,8 @@ you can just download the project file with the zip file and install it to your 
 
 ### A video demonstrate the plugin L :stuck_out_tongue_winking_eye:
 
-[![Alt text](https://img.youtube.com/vi/VID/0.jpg)](https://www.youtube.com/watch?v=GFzOiX4XlA4&list=LLQlydY78x6PTqUq5LKDPuUg)
-
-
+<div align="center">
+  <a href=http://www.youtube.com/watch?v=GFzOiX4XlA4" >
+    <img src="http://img.youtube.com/vi/GFzOiX4XlA4/0.jpg" alt="demo">
+  </a>
+</div>
