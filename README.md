@@ -7,7 +7,8 @@ use elementor pro to build a site. a few bugs and lack of features with posts wi
 ## let's get to the widget (It's free for everyone)
 
 you can just download the project file with the zip file and install it to your Wordpress site. 
-look for `jaxer element` activate and enjoy!!!
+look for `jaxer element` in the basic category name `Pss`. activate and enjoy!!!
+
 If you like it please star it. and please give feedback and report issue if any.
 
 
