@@ -1,9 +1,9 @@
-// [TODO:]  animation and image ratio  does not live view, 
+// [TODO:]  
 // [Future] : url string for copy, refactor php string to php partial
 // [Done:]  image ration, animation child(by adding new animate control) not parent, and avata, 
 //          take out editor angular render animation duration, button next prev, button background, 
 //          pagination load more , push data easyload, remove elementor-pro name, excerpt , and pss rename,
-//          and add git-hup to my plugin author, loader does not load for second time because elhEight is too big to view
+//          and add git-hup to my plugin author, loader does not load for second time because elhEight is too big to view, animation and image ratio  does not live view, 
 // [Next learn:]  elementor widget custom build , wedget setting params.
 // [Learned:] wrapper is contianer, without it , it will modifies selector every where so wrapper help specify selector
 (function(angular,$) {

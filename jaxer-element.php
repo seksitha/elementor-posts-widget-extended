@@ -71,7 +71,7 @@ final class Jaxer_Element {
 
         wp_enqueue_script( 'angularjs', plugins_url( '/assets/js/angular.min.js', __FILE__ ), [ ], false, false );
         wp_enqueue_script( 'angular_sanitize', plugins_url( '/assets/js/angular-sanitize.min.js', __FILE__ ), ['angularjs' ], false, false );
-        wp_enqueue_script( 'jaxer-script', plugins_url( '/assets/js/plugin.js', __FILE__ ), [ 'angularjs','jquery' ], false, false );
+        wp_enqueue_script( 'jaxer-script', plugins_url( '/assets/js/plugin.min.js', __FILE__ ), [ 'angularjs','jquery' ], false, false );
         wp_localize_script( 'jaxer-script', 'wpDdminUrl', [url=>get_admin_url(),'loaderUrl'=>plugins_url( '/widgets/posts/loader.svg', __FILE__ )] );
         
         function ajax_handle_request(){
