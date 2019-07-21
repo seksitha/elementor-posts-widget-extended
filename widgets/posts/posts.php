@@ -198,9 +198,4 @@ class Pss extends Pss_Base
 		 */
 		do_action( "elementor_pro/posts/query/{$query_id}", $wp_query, $this );
     }
-    protected function _content_template() {
-		?>
-		<div class="animated {{ settings.c_animation }}"> <p>this is animations</p> </div>
-		<?php
-	}
 }

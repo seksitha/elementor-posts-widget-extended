@@ -14,7 +14,7 @@
         "$http",
         "$q",
 		function($scope, $http,$q) {
-			angular.element();
+            angular.element();
 			$scope.try = "Get Data";
 			$scope.posts = { a: "stiha" };
 			$scope.template = {};
@@ -80,6 +80,7 @@
                             } 
                             $scope["_" + options.id] = $scope["_" + options.id].concat(re.data);
                             document.getElementById("loader").remove();
+                            $scope["_" + options.id + '_class'].postsToLoad = ((options.posts_per_page * options.max_page) - ((($scope["_" + options.id + '_class'].current) - 1) * options.posts_per_page)) + ' Posts'
                         },
                         function() {}
                     );
@@ -167,5 +168,5 @@
 
             }
 		},
-	]);
+    ]);
 })(angular,jQuery);

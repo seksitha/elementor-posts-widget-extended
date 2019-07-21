@@ -77,7 +77,6 @@ abstract class Pss_Base extends Base_Widget {
 				'condition' => [
 					'pagination_type' => [
 						'numbers',
-						'numbers_and_prev_next',
 					],
 				],
 			]
@@ -161,9 +160,9 @@ abstract class Pss_Base extends Base_Widget {
 			]
         );
         $this->add_responsive_control(
-			'pagination_margin',
+			'pagination_nav_padding',
 			[
-				'label' => __( 'Padding', 'elementor' ),
+				'label' => __( 'Nav Padding', 'elementor' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -172,9 +171,20 @@ abstract class Pss_Base extends Base_Widget {
 			]
         );
         $this->add_responsive_control(
+			'pagination_button_padding',
+			[
+				'label' => __( 'Button Padding', 'elementor' ),
+				'type' => Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', '%' ],
+				'selectors' => [
+					'{{WRAPPER}} .elementor-pagination button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+        );
+        $this->add_responsive_control(
 			'pagination_boader_radius',
 			[
-				'label' => __( 'Boarder radius', 'elementor' ),
+				'label' => __( 'Button Boarder radius', 'elementor' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [

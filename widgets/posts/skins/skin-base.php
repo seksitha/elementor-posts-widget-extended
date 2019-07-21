@@ -116,6 +116,7 @@ abstract class Skinss_Base extends Elementor_Skin_Base
                 'condition' => [
                     $this->get_control_id('thumbnail!') => 'none',
                 ],
+                // 'render_type' => 'template'
             ]
         );
 
@@ -402,11 +403,13 @@ abstract class Skinss_Base extends Elementor_Skin_Base
                 'prefix_class' => 'elementor-posts--align-',
             ]
         );
+
         $this->add_control(
 			'c_animation',
 			[
 				'label' => __( 'Animation', 'jaxer-element' ),
                 'type' => Controls_Manager::ANIMATION,
+                'render_type' => 'template'
 			]
         );
         
@@ -417,6 +420,7 @@ abstract class Skinss_Base extends Elementor_Skin_Base
                     'label' => __('Animation Duration', 'jaxer-element'),
                     'type' => Controls_Manager::NUMBER,
                     'default' => 1500,
+                    'render_type' => 'template',
                     'condition'=> [
                         $this->get_control_id('c_animation!') =>''
                     ],
@@ -1054,31 +1058,37 @@ abstract class Skinss_Base extends Elementor_Skin_Base
             // echo '<pre>';
             // print_r($parent_settings);
             if ('numbers' === $parent_settings['pagination_type']) {
+
                 echo "<button ng-click='getPost(" . json_encode($param) . ", _".$id ."_class.current == 1 || !_". $id ."_class.current" . ",\"prev\" )' class='page-numbers {{_". $id ."_class.current == 1 ? \"disabled\":null}}{{!_". $id ."_class.current ? \"disabled\":null}}' ><i class='fas fa-angle-left'></i></button>";
             
                 for ($i = 1; $i <= $page_limit; $i++) {
                     $param['paged'] = $i;
-                    if($page_limit <= 5) echo "<button ng-click='getPost(" . 
+                    if($parent_settings['pagination_numbers_shorten'] === 'yes'){
+                        if ( \Elementor\Plugin::$instance->editor->is_edit_mode() ) {
+                            if($i > 5 && $i == $page_limit ) echo "<button class='page-numbers'> 1 of $page_limit</button>";
+                        } else{
+                            if($i > 5 && $i == $page_limit ) echo "<button class='page-numbers' ng-cloak> {{_". $id ."_class.current ? _". $id ."_class.current : 1 }} of $page_limit</button>";
+                        }
+                        
+                    } else{
+                        echo "<button ng-click='getPost(" . 
                         json_encode($param) . ",_" . $id ."_class.current == $i || ($i ==1 && !_" . $id ."_class.current)" . ",\"paged\")' 
                         class='page-numbers {{_". $id ."_class.current == $i ? \"current\":null}}{{!_". $id ."_class.current && $i ==1 ? \"current\":null}}'>" . $i . '</button>';
-                    if ( \Elementor\Plugin::$instance->editor->is_edit_mode() ) {
-                        if($i > 5 && $i == $page_limit ) echo "<button class='page-numbers'> 1 of $page_limit</button>";
-                    } else{
-                        if($i > 5 && $i == $page_limit ) echo "<button class='page-numbers' ng-cloak> {{_". $id ."_class.current ? _". $id ."_class.current : 1 }} of $page_limit</button>";
                     }
-
                 } 
 
-                // echo "<button ng-click='getPost(" . json_encode($param) . ",_" . $id .
-                // "_class.current == $page_limit || ($page_limit ==1 && !_" . $id ."_class.current)" . 
-                // ",\"paged\")' class='page-numbers {{_". $id ."_class.current == $page_limit ? \"current\":null}}{{!_". 
-                // $id ."_class.current && $page_limit ==1 ? \"current\":null}}'>" . $page_limit . '</button>';
 
                 echo "<button ng-click='getPost(" . json_encode($param) . ",_" . $id ."_class.current == $page_limit" . ",\"next\")' class='page-numbers {{_". $id ."_class.current == $page_limit ? \"disabled\":null}}'> <i class='fas fa-angle-right'></i></button>";
+            
             }
-            if('load_more' === $parent_settings['pagination_type']){
+            if ('load_more' === $parent_settings['pagination_type']) {
                 $param['paged'] = 2;
-                echo "<button ng-hide='_". $id ."_class.hide' ng-click='getPost(" . json_encode($param) . ", _". $id ."_class.current == $page_limit + 1" . ")' class='page-numbers load-more'> LOAD MORE  </i></button>";
+                if ( \Elementor\Plugin::$instance->editor->is_edit_mode() ) {
+                    echo "<button class='page-numbers load-more'> &nbsp;LOAD MORE - " . (($page_limit * $this->get_instance_value('posts_per_page') - $this->get_instance_value('posts_per_page') . ' Posts') ) . "</button>";
+                    return;
+                }
+                
+                echo "<button ng-cloak ng-hide='_". $id ."_class.hide' ng-click='getPost(" . json_encode($param) . ", _". $id ."_class.current == $page_limit + 1" . ")' class='page-numbers load-more'> &nbsp;LOAD MORE - {{_" .$id. "_class.postsToLoad || '" . (($page_limit * $this->get_instance_value('posts_per_page') - $this->get_instance_value('posts_per_page') . ' Posts') ) . "' }}</button>";
             }
             
             
