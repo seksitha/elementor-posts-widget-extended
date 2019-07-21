@@ -62,34 +62,18 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         $this->add_control(
             'thumbnail',
             [
-                'label' => __('Image Position', 'elementor-pro'),
+                'label' => __('Image Position', 'jaxer-element'),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'top',
                 'options' => [
-                    'top' => __('Top', 'elementor-pro'),
-                    'left' => __('Left', 'elementor-pro'),
-                    'right' => __('Right', 'elementor-pro'),
-                    'none' => __('None', 'elementor-pro'),
+                    'top' => __('Top', 'jaxer-element'),
+                    'left' => __('Left', 'jaxer-element'),
+                    'right' => __('Right', 'jaxer-element'),
+                    'none' => __('None', 'jaxer-element'),
                 ],
                 'prefix_class' => 'elementor-widget-posts elementor-posts--thumbnail-',
             ]
         );
-
-        // $this->add_control(
-        //     'masonry',
-        //     [
-        //         'label' => __('Masonry', 'elementor-pro'),
-        //         'type' => Controls_Manager::SWITCHER,
-        //         'label_off' => __('Off', 'elementor-pro'),
-        //         'label_on' => __('On', 'elementor-pro'),
-        //         'condition' => [
-        //             $this->get_control_id('columns!') => '1',
-        //             $this->get_control_id('thumbnail') => 'top',
-        //         ],
-        //         'render_type' => 'ui',
-        //         'frontend_available' => true,
-        //     ]
-        // );
 
         $this->add_group_control(
             Group_Control_Image_Size::get_type(),
@@ -105,9 +89,9 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         );
 
         $this->add_responsive_control(
-            'item_ratio',
+            'pss_item_ratio',
             [
-                'label' => __('Image Ratio', 'elementor-pro'),
+                'label' => __('Image Ratio', 'jaxer-element'),
                 'type' => Controls_Manager::SLIDER,
                 'default' => [
                     'size' => 0.66,
@@ -131,7 +115,6 @@ abstract class Skinss_Base extends Elementor_Skin_Base
                 ],
                 'condition' => [
                     $this->get_control_id('thumbnail!') => 'none',
-                    // $this->get_control_id('masonry') => '',
                 ],
             ]
         );
@@ -139,7 +122,7 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         $this->add_responsive_control(
             'image_width',
             [
-                'label' => __('Image Width', 'elementor-pro'),
+                'label' => __('Image Width', 'jaxer-element'),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     '%' => [
@@ -179,7 +162,7 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         $this->add_responsive_control(
             'columns',
             [
-                'label' => __('Columns', 'elementor-pro'),
+                'label' => __('Columns', 'jaxer-element'),
                 'type' => Controls_Manager::SELECT,
                 'default' => '3',
                 'tablet_default' => '2',
@@ -203,7 +186,7 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         $this->add_control(
             'posts_per_page',
             [
-                'label' => __('Posts Per Page', 'elementor-pro'),
+                'label' => __('Posts Per Page', 'jaxer-element'),
                 'type' => Controls_Manager::NUMBER,
                 'default' => 6,
             ]
@@ -215,10 +198,10 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         $this->add_control(
             'show_title',
             [
-                'label' => __('Title', 'elementor-pro'),
+                'label' => __('Title', 'jaxer-element'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => __('Show', 'elementor-pro'),
-                'label_off' => __('Hide', 'elementor-pro'),
+                'label_on' => __('Show', 'jaxer-element'),
+                'label_off' => __('Hide', 'jaxer-element'),
                 'default' => 'yes',
                 'separator' => 'before',
             ]
@@ -227,7 +210,7 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         $this->add_control(
             'title_tag',
             [
-                'label' => __('Title HTML Tag', 'elementor-pro'),
+                'label' => __('Title HTML Tag', 'jaxer-element'),
                 'type' => Controls_Manager::SELECT,
                 'options' => [
                     'h1' => 'H1',
@@ -253,10 +236,10 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         $this->add_control(
             'show_excerpt',
             [
-                'label' => __('Excerpt', 'elementor-pro'),
+                'label' => __('Excerpt', 'jaxer-element'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => __('Show', 'elementor-pro'),
-                'label_off' => __('Hide', 'elementor-pro'),
+                'label_on' => __('Show', 'jaxer-element'),
+                'label_off' => __('Hide', 'jaxer-element'),
                 'default' => 'yes',
             ]
         );
@@ -264,7 +247,7 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         $this->add_control(
             'excerpt_length',
             [
-                'label' => __('Excerpt Length', 'elementor-pro'),
+                'label' => __('Excerpt Length', 'jaxer-element'),
                 'type' => Controls_Manager::NUMBER,
                 /** This filter is documented in wp-includes/formatting.php */
                 'default' => 25,
@@ -280,10 +263,10 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         $this->add_control(
             'show_read_more',
             [
-                'label' => __('Read More', 'elementor-pro'),
+                'label' => __('Read More', 'jaxer-element'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => __('Show', 'elementor-pro'),
-                'label_off' => __('Hide', 'elementor-pro'),
+                'label_on' => __('Show', 'jaxer-element'),
+                'label_off' => __('Hide', 'jaxer-element'),
                 'default' => 'yes',
                 'separator' => 'before',
             ]
@@ -292,9 +275,9 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         $this->add_control(
             'read_more_text',
             [
-                'label' => __('Read More Text', 'elementor-pro'),
+                'label' => __('Read More Text', 'jaxer-element'),
                 'type' => Controls_Manager::TEXT,
-                'default' => __('Read More »', 'elementor-pro'),
+                'default' => __('Read More »', 'jaxer-element'),
                 'condition' => [
                     $this->get_control_id('show_read_more') => 'yes',
                 ],
@@ -307,16 +290,16 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         $this->add_control(
             'meta_data',
             [
-                'label' => __('Meta Data', 'elementor-pro'),
+                'label' => __('Meta Data', 'jaxer-element'),
                 'label_block' => true,
                 'type' => Controls_Manager::SELECT2,
                 'default' => ['date', 'comments'],
                 'multiple' => true,
                 'options' => [
-                    'author' => __('Author', 'elementor-pro'),
-                    'date' => __('Date', 'elementor-pro'),
-                    'time' => __('Time', 'elementor-pro'),
-                    'comments' => __('Comments', 'elementor-pro'),
+                    'author' => __('Author', 'jaxer-element'),
+                    'date' => __('Date', 'jaxer-element'),
+                    'time' => __('Time', 'jaxer-element'),
+                    'comments' => __('Comments', 'jaxer-element'),
                 ],
                 'separator' => 'before',
             ]
@@ -325,7 +308,7 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         $this->add_control(
             'meta_separator',
             [
-                'label' => __('Separator Between', 'elementor-pro'),
+                'label' => __('Separator Between', 'jaxer-element'),
                 'type' => Controls_Manager::TEXT,
                 'default' => '///',
                 'selectors' => [
@@ -346,7 +329,7 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         $this->start_controls_section(
             'section_design_layout',
             [
-                'label' => __('Layout', 'elementor-pro'),
+                'label' => __('Layout', 'jaxer-element'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -355,7 +338,7 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         $this->add_control(
             'column_gap',
             [
-                'label' => __('Columns Gap', 'elementor-pro'),
+                'label' => __('Columns Gap', 'jaxer-element'),
                 'type' => Controls_Manager::SLIDER,
                 'default' => [
                     'size' => 30,
@@ -377,7 +360,7 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         $this->add_control(
             'row_gap',
             [
-                'label' => __('Rows Gap', 'elementor-pro'),
+                'label' => __('Rows Gap', 'jaxer-element'),
                 'type' => Controls_Manager::SLIDER,
                 'default' => [
                     'size' => 35,
@@ -399,20 +382,20 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         $this->add_control(
             'alignment',
             [
-                'label' => __('Alignment', 'elementor-pro'),
+                'label' => __('Alignment', 'jaxer-element'),
                 'type' => Controls_Manager::CHOOSE,
                 'label_block' => false,
                 'options' => [
                     'left' => [
-                        'title' => __('Left', 'elementor-pro'),
+                        'title' => __('Left', 'jaxer-element'),
                         'icon' => 'fa fa-align-left',
                     ],
                     'center' => [
-                        'title' => __('Center', 'elementor-pro'),
+                        'title' => __('Center', 'jaxer-element'),
                         'icon' => 'fa fa-align-center',
                     ],
                     'right' => [
-                        'title' => __('Right', 'elementor-pro'),
+                        'title' => __('Right', 'jaxer-element'),
                         'icon' => 'fa fa-align-right',
                     ],
                 ],
@@ -422,9 +405,8 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         $this->add_control(
 			'c_animation',
 			[
-				'label' => __( 'Animation', 'elementor-pro' ),
+				'label' => __( 'Animation', 'jaxer-element' ),
                 'type' => Controls_Manager::ANIMATION,
-
 			]
         );
         
@@ -432,7 +414,7 @@ abstract class Skinss_Base extends Elementor_Skin_Base
             $this->add_control(
                 'animation_duration',
                 [
-                    'label' => __('Animation Duration', 'elementor-pro'),
+                    'label' => __('Animation Duration', 'jaxer-element'),
                     'type' => Controls_Manager::NUMBER,
                     'default' => 1500,
                     'condition'=> [
@@ -450,7 +432,7 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         $this->start_controls_section(
             'section_design_image',
             [
-                'label' => __('Image', 'elementor-pro'),
+                'label' => __('Image', 'jaxer-element'),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition' => [
                     $this->get_control_id('thumbnail!') => 'none',
@@ -461,7 +443,7 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         $this->add_control(
             'img_border_radius',
             [
-                'label' => __('Border Radius', 'elementor-pro'),
+                'label' => __('Border Radius', 'jaxer-element'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
@@ -476,7 +458,7 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         $this->add_control(
             'image_spacing',
             [
-                'label' => __('Spacing', 'elementor-pro'),
+                'label' => __('Spacing', 'jaxer-element'),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -502,7 +484,7 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         $this->start_controls_tab(
             'normal',
             [
-                'label' => __('Normal', 'elementor-pro'),
+                'label' => __('Normal', 'jaxer-element'),
             ]
         );
 
@@ -519,7 +501,7 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         $this->start_controls_tab(
             'hover',
             [
-                'label' => __('Hover', 'elementor-pro'),
+                'label' => __('Hover', 'jaxer-element'),
             ]
         );
 
@@ -543,7 +525,7 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         $this->start_controls_section(
             'section_design_content',
             [
-                'label' => __('Content', 'elementor-pro'),
+                'label' => __('Content', 'jaxer-element'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -551,7 +533,7 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         $this->add_control(
             'heading_title_style',
             [
-                'label' => __('Title', 'elementor-pro'),
+                'label' => __('Title', 'jaxer-element'),
                 'type' => Controls_Manager::HEADING,
                 'condition' => [
                     $this->get_control_id('show_title') => 'yes',
@@ -562,7 +544,7 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         $this->add_control(
             'title_color',
             [
-                'label' => __('Color', 'elementor-pro'),
+                'label' => __('Color', 'jaxer-element'),
                 'type' => Controls_Manager::COLOR,
                 'scheme' => [
                     'type' => Scheme_Color::get_type(),
@@ -592,7 +574,7 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         $this->add_control(
             'title_spacing',
             [
-                'label' => __('Spacing', 'elementor-pro'),
+                'label' => __('Spacing', 'jaxer-element'),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -611,7 +593,7 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         $this->add_control(
             'heading_meta_style',
             [
-                'label' => __('Meta', 'elementor-pro'),
+                'label' => __('Meta', 'jaxer-element'),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
                 'condition' => [
@@ -623,7 +605,7 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         $this->add_control(
             'meta_color',
             [
-                'label' => __('Color', 'elementor-pro'),
+                'label' => __('Color', 'jaxer-element'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .elementor-post__meta-data' => 'color: {{VALUE}};',
@@ -637,7 +619,7 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         $this->add_control(
             'meta_separator_color',
             [
-                'label' => __('Separator Color', 'elementor-pro'),
+                'label' => __('Separator Color', 'jaxer-element'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .elementor-post__meta-data span:before' => 'color: {{VALUE}};',
@@ -663,7 +645,7 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         $this->add_control(
             'meta_spacing',
             [
-                'label' => __('Spacing', 'elementor-pro'),
+                'label' => __('Spacing', 'jaxer-element'),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -682,7 +664,7 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         $this->add_control(
             'heading_excerpt_style',
             [
-                'label' => __('Excerpt', 'elementor-pro'),
+                'label' => __('Excerpt', 'jaxer-element'),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
                 'condition' => [
@@ -694,7 +676,7 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         $this->add_control(
             'excerpt_color',
             [
-                'label' => __('Color', 'elementor-pro'),
+                'label' => __('Color', 'jaxer-element'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .elementor-post__excerpt p' => 'color: {{VALUE}};',
@@ -720,7 +702,7 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         $this->add_control(
             'excerpt_spacing',
             [
-                'label' => __('Spacing', 'elementor-pro'),
+                'label' => __('Spacing', 'jaxer-element'),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -739,7 +721,7 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         $this->add_control(
             'heading_readmore_style',
             [
-                'label' => __('Read More', 'elementor-pro'),
+                'label' => __('Read More', 'jaxer-element'),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
                 'condition' => [
@@ -751,7 +733,7 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         $this->add_control(
             'read_more_color',
             [
-                'label' => __('Color', 'elementor-pro'),
+                'label' => __('Color', 'jaxer-element'),
                 'type' => Controls_Manager::COLOR,
                 'scheme' => [
                     'type' => Scheme_Color::get_type(),
@@ -781,7 +763,7 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         $this->add_control(
             'read_more_spacing',
             [
-                'label' => __('Spacing', 'elementor-pro'),
+                'label' => __('Spacing', 'jaxer-element'),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -904,8 +886,7 @@ abstract class Skinss_Base extends Elementor_Skin_Base
 
         ?>
             <a class="elementor-post__thumbnail__link" href="<?php echo $this->current_permalink; ?>">
-            
-            <div class="elementor-post__thumbnail  <?php echo ($this->get_instance_value('item_ratio')['size'] > 0.66) ?  ' elementor-fit-height': ''; ?>"> <?php echo $thumbnail_html; ?> </div>
+            <div class="elementor-post__thumbnail  <?php echo ($this->get_instance_value('pss_item_ratio')['size'] > 0.66) ?  ' elementor-fit-height ': ''; ?> "> <?php echo $thumbnail_html; ?> </div>
             </a>
         <?php
         
@@ -1027,7 +1008,7 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         //         'total' => $page_limit,
         //         'prev_next' => false,
         //         'show_all' => 'yes' !== $parent_settings['pagination_numbers_shorten'],
-        //         'before_page_number' => '<span class="elementor-screen-only">' . __('Page', 'elementor-pro') . '</span>',
+        //         'before_page_number' => '<span class="elementor-screen-only">' . __('Page', 'jaxer-element') . '</span>',
         //     ];
 
         //     if (is_singular() && !is_front_page()) {
@@ -1051,12 +1032,13 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         
         ?>
         
-        <nav class="ajax elementor-pagination" role="navigation" aria-label="<?php esc_attr_e('Pagination', 'elementor-pro'); ?>">
+        <nav class="ajax elementor-pagination" role="navigation" aria-label="<?php esc_attr_e('Pagination', 'jaxer-element'); ?>">
     
         <?php
             $id = $this->parent->get_data('id');
             $param = [
                 'id' => $id,
+                'post_type' => $parent_settings['posts_post_type'],
                 'posts_per_page' => $this->get_instance_value('posts_per_page'),
                 'thumbnail_size' => $parent_settings[$this->get_id() . '_thumbnail_size_size'],
                 'max_page' => $page_limit,
@@ -1067,6 +1049,7 @@ abstract class Skinss_Base extends Elementor_Skin_Base
                 'category' => $parent_settings['posts_category_ids'],
                 'tags' => $parent_settings['posts_post_tag_ids'],
                 'format' => $parent_settings['posts_post_format_ids'],
+                'excerpt_length' => $this->get_instance_value('excerpt_length')
             ];
             // echo '<pre>';
             // print_r($parent_settings);
@@ -1227,7 +1210,7 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         $skin = $this->get_id();
         ?>
             <a class="elementor-post__thumbnail__link" href="{{post.posturl}}">
-                <div class="elementor-post__thumbnail <?php echo ($this->get_instance_value('item_ratio')['size'] > 0.66) ?  ' elementor-fit-height': ''; ?>">
+                <div class="elementor-post__thumbnail <?php echo ($this->get_instance_value('pss_item_ratio')['size'] > 0.66) ?  ' elementor-fit-height': ''; ?>">
                     <img
                         width="<?php echo get_option($settings[$skin.'_thumbnail_size_size'] . '_size_w')|750;?>"
                         height="<?php echo get_option($settings[$skin.'_thumbnail_size_size'] . '_size_h')|500;?>"
@@ -1352,7 +1335,7 @@ abstract class Skinss_Base extends Elementor_Skin_Base
             return;
         } ?>
 		<div class="elementor-post__excerpt">
-			{{post.post_excerpt}}
+			<p>{{post.post_excerpt}}</p>
 		</div>
 		<?php
     }
@@ -1368,9 +1351,6 @@ abstract class Skinss_Base extends Elementor_Skin_Base
 			</a>
 		<?php
     }
-
-
-
 
     public function render_amp()
     {

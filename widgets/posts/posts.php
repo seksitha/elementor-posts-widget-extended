@@ -28,7 +28,7 @@ class Pss extends Pss_Base
 
     public function get_title()
     {
-        return __('Pss', 'jaxer-element');
+        return __('Jaxer Posts', 'jaxer-element');
     }
 
 
@@ -93,7 +93,7 @@ class Pss extends Pss_Base
 		$this->start_controls_section(
 			'section_query',
 			[
-				'label' => __( 'Query', 'elementor-pro' ),
+				'label' => __( 'Query', 'jaxer-element' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -108,7 +108,7 @@ class Pss extends Pss_Base
 		$this->add_control(
 			'advanced',
 			[
-				'label' => __( 'Advanced', 'elementor-pro' ),
+				'label' => __( 'Advanced', 'jaxer-element' ),
 				'type' => Controls_Manager::HEADING,
 				'condition' => [
 					'posts_post_type!' => 'current_query',
@@ -119,14 +119,14 @@ class Pss extends Pss_Base
 		$this->add_control(
 			'orderby',
 			[
-				'label' => __( 'Order By', 'elementor-pro' ),
+				'label' => __( 'Order By', 'jaxer-element' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'post_date',
 				'options' => [
-					'post_date' => __( 'Date', 'elementor-pro' ),
-					'post_title' => __( 'Title', 'elementor-pro' ),
-					'menu_order' => __( 'Menu Order', 'elementor-pro' ),
-					'rand' => __( 'Random', 'elementor-pro' ),
+					'post_date' => __( 'Date', 'jaxer-element' ),
+					'post_title' => __( 'Title', 'jaxer-element' ),
+					'menu_order' => __( 'Menu Order', 'jaxer-element' ),
+					'rand' => __( 'Random', 'jaxer-element' ),
 				],
 				'condition' => [
 					'posts_post_type!' => 'current_query',
@@ -137,12 +137,12 @@ class Pss extends Pss_Base
 		$this->add_control(
 			'order',
 			[
-				'label' => __( 'Order', 'elementor-pro' ),
+				'label' => __( 'Order', 'jaxer-element' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'desc',
 				'options' => [
-					'asc' => __( 'ASC', 'elementor-pro' ),
-					'desc' => __( 'DESC', 'elementor-pro' ),
+					'asc' => __( 'ASC', 'jaxer-element' ),
+					'desc' => __( 'DESC', 'jaxer-element' ),
 				],
 				'condition' => [
 					'posts_post_type!' => 'current_query',
@@ -153,7 +153,7 @@ class Pss extends Pss_Base
 		$this->add_control(
 			'offset',
 			[
-				'label' => __( 'Offset', 'elementor-pro' ),
+				'label' => __( 'Offset', 'jaxer-element' ),
 				'type' => Controls_Manager::NUMBER,
 				'default' => 0,
 				'condition' => [
@@ -162,7 +162,7 @@ class Pss extends Pss_Base
 						'current_query',
 					],
 				],
-				'description' => __( 'Use this setting to skip over posts (e.g. \'2\' to skip over 2 posts).', 'elementor-pro' ),
+				'description' => __( 'Use this setting to skip over posts (e.g. \'2\' to skip over 2 posts).', 'jaxer-element' ),
 			]
 		);
 
@@ -171,10 +171,10 @@ class Pss extends Pss_Base
 		$this->add_control(
 			'posts_query_id',
 			[
-				'label' => __( 'Query ID', 'elementor-pro' ),
+				'label' => __( 'Query ID', 'jaxer-element' ),
 				'type' => Controls_Manager::TEXT,
 				'default' => '',
-				'description' => __( 'Give your Query a custom unique id to allow server side filtering', 'elementor-pro' ),
+				'description' => __( 'Give your Query a custom unique id to allow server side filtering', 'jaxer-element' ),
 			]
 		);
 
@@ -197,5 +197,10 @@ class Pss extends Pss_Base
 		 * @param Posts     $this
 		 */
 		do_action( "elementor_pro/posts/query/{$query_id}", $wp_query, $this );
+    }
+    protected function _content_template() {
+		?>
+		<div class="animated {{ settings.c_animation }}"> <p>this is animations</p> </div>
+		<?php
 	}
 }

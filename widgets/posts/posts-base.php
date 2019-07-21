@@ -39,20 +39,20 @@ abstract class Pss_Base extends Base_Widget {
 		$this->start_controls_section(
 			'section_pagination',
 			[
-				'label' => __( 'Pagination', 'elementor-pro' ),
+				'label' => __( 'Pagination', 'jaxer-element' ),
 			]
 		);
 
 		$this->add_control(
 			'pagination_type',
 			[
-				'label' => __( 'Pagination', 'elementor-pro' ),
+				'label' => __( 'Pagination', 'jaxer-element' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '',
 				'options' => [
-					'' => __( 'None', 'elementor-pro' ),
-					'numbers' => __( 'Nav-button', 'elementor-pro' ),
-					'load_more' => __( 'Load more', 'elementor-pro' ),
+					'' => __( 'None', 'jaxer-element' ),
+					'numbers' => __( 'Nav-button', 'jaxer-element' ),
+					'load_more' => __( 'Load more', 'jaxer-element' ),
 				],
 			]
 		);
@@ -60,7 +60,7 @@ abstract class Pss_Base extends Base_Widget {
 		$this->add_control(
 			'pagination_page_limit',
 			[
-				'label' => __( 'Page Limit', 'elementor-pro' ),
+				'label' => __( 'Page Limit', 'jaxer-element' ),
 				'default' => '',
 				'condition' => [
 					'pagination_type!' => '',
@@ -71,7 +71,7 @@ abstract class Pss_Base extends Base_Widget {
 		$this->add_control(
 			'pagination_numbers_shorten',
 			[
-				'label' => __( 'Shorten', 'elementor-pro' ),
+				'label' => __( 'Shorten', 'jaxer-element' ),
 				'type' => Controls_Manager::SWITCHER,
 				'default' => '',
 				'condition' => [
@@ -86,8 +86,8 @@ abstract class Pss_Base extends Base_Widget {
 		$this->add_control(
 			'pagination_prev_label',
 			[
-				'label' => __( 'Previous Label', 'elementor-pro' ),
-				'default' => __( '&laquo; Previous', 'elementor-pro' ),
+				'label' => __( 'Previous Label', 'jaxer-element' ),
+				'default' => __( '&laquo; Previous', 'jaxer-element' ),
 				'condition' => [
 					'pagination_type' => [
 						'prev_next',
@@ -100,8 +100,8 @@ abstract class Pss_Base extends Base_Widget {
 		$this->add_control(
 			'pagination_next_label',
 			[
-				'label' => __( 'Next Label', 'elementor-pro' ),
-				'default' => __( 'Next &raquo;', 'elementor-pro' ),
+				'label' => __( 'Next Label', 'jaxer-element' ),
+				'default' => __( 'Next &raquo;', 'jaxer-element' ),
 				'condition' => [
 					'pagination_type' => [
 						'prev_next',
@@ -114,19 +114,19 @@ abstract class Pss_Base extends Base_Widget {
 		$this->add_control(
 			'pagination_align',
 			[
-				'label' => __( 'Alignment', 'elementor-pro' ),
+				'label' => __( 'Alignment', 'jaxer-element' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left' => [
-						'title' => __( 'Left', 'elementor-pro' ),
+						'title' => __( 'Left', 'jaxer-element' ),
 						'icon' => 'fa fa-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'elementor-pro' ),
+						'title' => __( 'Center', 'jaxer-element' ),
 						'icon' => 'fa fa-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'elementor-pro' ),
+						'title' => __( 'Right', 'jaxer-element' ),
 						'icon' => 'fa fa-align-right',
 					],
 				],
@@ -153,7 +153,7 @@ abstract class Pss_Base extends Base_Widget {
 		$this->start_controls_section( // SECTION CONTROL
 			'section_pagination_style',
 			[
-				'label' => __( 'Pagination', 'elementor-pro' ),
+				'label' => __( 'Pagination', 'jaxer-element' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'pagination_type!' => '',
@@ -185,7 +185,7 @@ abstract class Pss_Base extends Base_Widget {
         $this->add_control( 
 			'font_color_nav_button',
 			[
-				'label' => __( 'Color', 'elementor-pro' ),
+				'label' => __( 'Color', 'jaxer-element' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} nav button' => 'color: {{VALUE}}',
@@ -205,7 +205,7 @@ abstract class Pss_Base extends Base_Widget {
 		$this->add_control( // seperator line ____________________
 			'pagination_color_heading',
 			[
-				'label' => __( 'Colors', 'elementor-pro' ),
+				'label' => __( 'Colors', 'jaxer-element' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -216,14 +216,14 @@ abstract class Pss_Base extends Base_Widget {
 		$this->start_controls_tab(
 			'pagination_color_normal',
 			[
-				'label' => __( 'Normal', 'elementor-pro' ),
+				'label' => __( 'Normal', 'jaxer-element' ),
 			]
 		);
 
 		$this->add_control(
 			'pagination_color', // normal
 			[
-				'label' => __( 'Color', 'elementor-pro' ),
+				'label' => __( 'Color', 'jaxer-element' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-pagination .page-numbers:not(.dots)' => 'background-color: {{VALUE}};',
@@ -236,14 +236,14 @@ abstract class Pss_Base extends Base_Widget {
 		$this->start_controls_tab(
 			'pagination_color_hover', //hover
 			[
-				'label' => __( 'Hover', 'elementor-pro' ),
+				'label' => __( 'Hover', 'jaxer-element' ),
 			]
 		);
 
 		$this->add_control(
 			'pagination_hover_color', //hover
 			[
-				'label' => __( 'Color', 'elementor-pro' ),
+				'label' => __( 'Color', 'jaxer-element' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-pagination button.page-numbers:hover' => 'background-color: {{VALUE}};',
@@ -256,14 +256,14 @@ abstract class Pss_Base extends Base_Widget {
 		$this->start_controls_tab(
 			'pagination_color_active',
 			[
-				'label' => __( 'Active', 'elementor-pro' ),
+				'label' => __( 'Active', 'jaxer-element' ),
 			]
 		);
 
 		$this->add_control(
 			'pagination_active_color', // active
 			[
-				'label' => __( 'Color', 'elementor-pro' ),
+				'label' => __( 'Color', 'jaxer-element' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-pagination .page-numbers.current' => 'background-color: {{VALUE}};',
@@ -278,7 +278,7 @@ abstract class Pss_Base extends Base_Widget {
 		$this->add_responsive_control(
 			'pagination_spacing',
 			[
-				'label' => __( 'Space Between', 'elementor-pro' ),
+				'label' => __( 'Space Between', 'jaxer-element' ),
 				'type' => Controls_Manager::SLIDER,
 				'separator' => 'before',
 				'default' => [
@@ -383,7 +383,7 @@ abstract class Pss_Base extends Base_Widget {
 		$this->start_controls_section(
 			'section_layout',
 			[
-				'label' => __( 'Layout', 'elementor-pro' ),
+				'label' => __( 'Layout', 'jaxer-element' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);

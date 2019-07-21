@@ -2,10 +2,10 @@
 /**
  * Plugin Name: Jaxer Element
  * Description: Extending elementor post widget the lazy load pagination and load more by using ajax AngularJs.
- * Plugin URI:  
+ * Plugin URI:  https://github.com/seksitha/elementor-posts-widget-extended
  * Version:     1.0.0
  * Author:      Sek Sitha
- * Author URI: 
+ * Author URI: https://github.com/seksitha/elementor-posts-widget-extended
  * Author email : seksitha@gmail.com
  * Text Domain: jaxer-element
  */
@@ -71,7 +71,7 @@ final class Jaxer_Element {
 
         wp_enqueue_script( 'angularjs', plugins_url( '/assets/js/angular.min.js', __FILE__ ), [ ], false, false );
         wp_enqueue_script( 'angular_sanitize', plugins_url( '/assets/js/angular-sanitize.min.js', __FILE__ ), ['angularjs' ], false, false );
-        wp_enqueue_script( 'jaxer-script', plugins_url( '/assets/js/plugin.min.js', __FILE__ ), [ 'angularjs','jquery' ], false, false );
+        wp_enqueue_script( 'jaxer-script', plugins_url( '/assets/js/plugin.js', __FILE__ ), [ 'angularjs','jquery' ], false, false );
         wp_localize_script( 'jaxer-script', 'wpDdminUrl', [url=>get_admin_url(),'loaderUrl'=>plugins_url( '/widgets/posts/loader.svg', __FILE__ )] );
         
         function ajax_handle_request(){
@@ -80,8 +80,8 @@ final class Jaxer_Element {
             $data = file_get_contents("php://input");
             $postdata = json_decode($data);
             $query->query( [
-                'posts_per_page'=>$postdata->posts_per_page, 
-                'post_type'=>'post', 
+                'posts_per_page'=> $postdata->posts_per_page, 
+                'post_type'=>$postdata->post_type, 
                 'paged'=>$postdata->paged,
                 'orderby' => $postdata->orderby,
                 'order' => $postdata->order,
@@ -98,7 +98,7 @@ final class Jaxer_Element {
                 $posts[$key]->author = get_author_name($post->post_author);
                 $posts[$key]->avatar = get_avatar( get_the_author_meta( $post->post_author ), 128, '', get_the_author_meta( 'display_name' ) );
                 $posts[$key]->badge = get_the_terms( $post->ID, 'category' )[0]->name;
-                
+                $posts[$key]->post_excerpt = wp_trim_words($posts[$key]->post_excerpt, $postdata->excerpt_length,'...');
             }
             
             echo (json_encode($posts));

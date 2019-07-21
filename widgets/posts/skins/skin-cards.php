@@ -21,7 +21,7 @@ class Skinss_Cards extends Skinss_Base {
 	}
 
 	public function get_title() {
-		return __( 'Cards', 'elementor-pro' );
+		return __( 'Cards', 'jaxer-element' );
 	}
 
 	public function start_controls_tab( $id, $args ) {
@@ -75,10 +75,10 @@ class Skinss_Cards extends Skinss_Base {
 		$this->update_control(
 			'thumbnail',
 			[
-				'label' => __( 'Show Image', 'elementor-pro' ),
+				'label' => __( 'Show Image', 'jaxer-element' ),
 				'options' => [
-					'top' => __( 'Yes', 'elementor-pro' ),
-					'none' => __( 'No', 'elementor-pro' ),
+					'top' => __( 'Yes', 'jaxer-element' ),
+					'none' => __( 'No', 'jaxer-element' ),
 				],
 				'render_type' => 'template',
 			]
@@ -113,7 +113,7 @@ class Skinss_Cards extends Skinss_Base {
 		$this->add_control(
 			'heading_badge_style',
 			[
-				'label' => __( 'Badge', 'elementor-pro' ),
+				'label' => __( 'Badge', 'jaxer-element' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 				'condition' => [
@@ -130,11 +130,11 @@ class Skinss_Cards extends Skinss_Base {
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left' => [
-						'title' => __( 'Left', 'elementor-pro' ),
+						'title' => __( 'Left', 'jaxer-element' ),
 						'icon' => 'eicon-h-align-left',
 					],
 					'right' => [
-						'title' => __( 'Right', 'elementor-pro' ),
+						'title' => __( 'Right', 'jaxer-element' ),
 						'icon' => 'eicon-h-align-right',
 					],
 				],
@@ -151,7 +151,7 @@ class Skinss_Cards extends Skinss_Base {
 		$this->add_control(
 			'badge_bg_color',
 			[
-				'label' => __( 'Background Color', 'elementor-pro' ),
+				'label' => __( 'Background Color', 'jaxer-element' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-post__card .elementor-post__badge' => 'background-color: {{VALUE}};',
@@ -169,7 +169,7 @@ class Skinss_Cards extends Skinss_Base {
 		$this->add_control(
 			'badge_color',
 			[
-				'label' => __( 'Text Color', 'elementor-pro' ),
+				'label' => __( 'Text Color', 'jaxer-element' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-post__card .elementor-post__badge' => 'color: {{VALUE}};',
@@ -183,7 +183,7 @@ class Skinss_Cards extends Skinss_Base {
 		$this->add_control(
 			'badge_radius',
 			[
-				'label' => __( 'Border Radius', 'elementor-pro' ),
+				'label' => __( 'Border Radius', 'jaxer-element' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -202,7 +202,7 @@ class Skinss_Cards extends Skinss_Base {
 		$this->add_control(
 			'badge_size',
 			[
-				'label' => __( 'Size', 'elementor-pro' ),
+				'label' => __( 'Size', 'jaxer-element' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -222,7 +222,7 @@ class Skinss_Cards extends Skinss_Base {
 		$this->add_control(
 			'badge_margin',
 			[
-				'label' => __( 'Margin', 'elementor-pro' ),
+				'label' => __( 'Margin', 'jaxer-element' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -257,7 +257,7 @@ class Skinss_Cards extends Skinss_Base {
 		$this->add_control(
 			'heading_avatar_style',
 			[
-				'label' => __( 'Avatar', 'elementor-pro' ),
+				'label' => __( 'Avatar', 'jaxer-element' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 				'condition' => [
@@ -270,7 +270,7 @@ class Skinss_Cards extends Skinss_Base {
 		$this->add_control(
 			'avatar_size',
 			[
-				'label' => __( 'Size', 'elementor-pro' ),
+				'label' => __( 'Size', 'jaxer-element' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -294,10 +294,10 @@ class Skinss_Cards extends Skinss_Base {
 		$this->add_control(
 			'show_badge',
 			[
-				'label' => __( 'Badge', 'elementor-pro' ),
+				'label' => __( 'Badge', 'jaxer-element' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'elementor-pro' ),
-				'label_off' => __( 'Hide', 'elementor-pro' ),
+				'label_on' => __( 'Show', 'jaxer-element' ),
+				'label_off' => __( 'Hide', 'jaxer-element' ),
 				'default' => 'yes',
 				'separator' => 'before',
 			]
@@ -306,7 +306,7 @@ class Skinss_Cards extends Skinss_Base {
 		$this->add_control(
 			'badge_taxonomy',
 			[
-				'label' => __( 'Badge Taxonomy', 'elementor-pro' ),
+				'label' => __( 'Badge Taxonomy', 'jaxer-element' ),
 				'type' => Controls_Manager::SELECT2,
 				'label_block' => true,
 				'default' => 'category',
@@ -322,10 +322,10 @@ class Skinss_Cards extends Skinss_Base {
 		$this->add_control(
 			'show_avatar',
 			[
-				'label' => __( 'Avatar', 'elementor-pro' ),
+				'label' => __( 'Avatar', 'jaxer-element' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'elementor-pro' ),
-				'label_off' => __( 'Hide', 'elementor-pro' ),
+				'label_on' => __( 'Show', 'jaxer-element' ),
+				'label_off' => __( 'Hide', 'jaxer-element' ),
 				'return_value' => 'show-avatar',
 				'default' => 'show-avatar',
 				'separator' => 'before',
@@ -342,7 +342,7 @@ class Skinss_Cards extends Skinss_Base {
 		$this->start_controls_section(
 			'section_design_card',
 			[
-				'label' => __( 'Card', 'elementor-pro' ),
+				'label' => __( 'Card', 'jaxer-element' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -350,7 +350,7 @@ class Skinss_Cards extends Skinss_Base {
 		$this->add_control(
 			'card_bg_color',
 			[
-				'label' => __( 'Background Color', 'elementor-pro' ),
+				'label' => __( 'Background Color', 'jaxer-element' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-post__card' => 'background-color: {{VALUE}}',
@@ -361,7 +361,7 @@ class Skinss_Cards extends Skinss_Base {
 		$this->add_control(
 			'card_border_color',
 			[
-				'label' => __( 'Border Color', 'elementor-pro' ),
+				'label' => __( 'Border Color', 'jaxer-element' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-post__card' => 'border-color: {{VALUE}}',
@@ -372,7 +372,7 @@ class Skinss_Cards extends Skinss_Base {
 		$this->add_control(
 			'card_border_width',
 			[
-				'label' => __( 'Border Width', 'elementor-pro' ),
+				'label' => __( 'Border Width', 'jaxer-element' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -390,7 +390,7 @@ class Skinss_Cards extends Skinss_Base {
 		$this->add_control(
 			'card_border_radius',
 			[
-				'label' => __( 'Border Radius', 'elementor-pro' ),
+				'label' => __( 'Border Radius', 'jaxer-element' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%' ],
 				'range' => [
@@ -408,7 +408,7 @@ class Skinss_Cards extends Skinss_Base {
 		$this->add_control(
 			'card_padding',
 			[
-				'label' => __( 'Horizontal Padding', 'elementor-pro' ),
+				'label' => __( 'Horizontal Padding', 'jaxer-element' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -428,7 +428,7 @@ class Skinss_Cards extends Skinss_Base {
 		$this->add_control(
 			'card_vertical_padding',
 			[
-				'label' => __( 'Vertical Padding', 'elementor-pro' ),
+				'label' => __( 'Vertical Padding', 'jaxer-element' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -446,7 +446,7 @@ class Skinss_Cards extends Skinss_Base {
 		$this->add_control(
 			'box_shadow_box_shadow_type', // The name of this control is like that, for future extensibility to group_control box shadow.
 			[
-				'label' => __( 'Box Shadow', 'elementor-pro' ),
+				'label' => __( 'Box Shadow', 'jaxer-element' ),
 				'type' => Controls_Manager::SWITCHER,
 				'prefix_class' => 'elementor-card-shadow-',
 				'default' => 'yes',
@@ -456,14 +456,14 @@ class Skinss_Cards extends Skinss_Base {
 		$this->add_control(
 			'hover_effect',
 			[
-				'label' => __( 'Hover Effect', 'elementor-pro' ),
+				'label' => __( 'Hover Effect', 'jaxer-element' ),
 				'type' => Controls_Manager::SELECT,
 				'label_block' => false,
 				'options' => [
-					'none' => __( 'None', 'elementor-pro' ),
-					'gradient' => __( 'Gradient', 'elementor-pro' ),
-					//'zoom-in' => __( 'Zoom In', 'elementor-pro' ),
-					//'zoom-out' => __( 'Zoom Out', 'elementor-pro' ),
+					'none' => __( 'None', 'jaxer-element' ),
+					'gradient' => __( 'Gradient', 'jaxer-element' ),
+					//'zoom-in' => __( 'Zoom In', 'jaxer-element' ),
+					//'zoom-out' => __( 'Zoom Out', 'jaxer-element' ),
 				],
 				'default' => 'gradient',
 				'separator' => 'before',
@@ -474,7 +474,7 @@ class Skinss_Cards extends Skinss_Base {
 		$this->add_control(
 			'meta_border_color',
 			[
-				'label' => __( 'Meta Border Color', 'elementor-pro' ),
+				'label' => __( 'Meta Border Color', 'jaxer-element' ),
 				'type' => Controls_Manager::COLOR,
 				'separator' => 'before',
 				'selectors' => [
@@ -490,7 +490,7 @@ class Skinss_Cards extends Skinss_Base {
 		$this->add_control(
 			'card_bg_color',
 			[
-				'label' => __( 'Background Color', 'elementor-pro' ),
+				'label' => __( 'Background Color', 'jaxer-element' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-post__card' => 'background-color: {{VALUE}}',
@@ -585,7 +585,7 @@ class Skinss_Cards extends Skinss_Base {
 		}
 		?>
 		<a class="elementor-post__thumbnail__link" href="<?php echo get_permalink(); ?>">
-        <div class="elementor-post__thumbnail  <?php echo ($this->get_instance_value('item_ratio')['size'] > 0.66) ?  ' elementor-fit-height': ''; ?>"> <?php echo $thumbnail_html; ?> </div>
+        <div class="elementor-post__thumbnail  <?php echo ($this->get_instance_value('pss_item_ratio')['size'] > 0.66) ?  ' elementor-fit-height': ''; ?>"> <?php echo $thumbnail_html; ?> </div>
             </a>
 		<?php
 		if ( $this->get_instance_value( 'show_badge' ) ) {
@@ -629,7 +629,7 @@ class Skinss_Cards extends Skinss_Base {
         $skin = $this->get_id();
         ?>
             <a class="elementor-post__thumbnail__link " href="{{post.posturl}}">
-                <div class="elementor-post__thumbnail <?php echo ($this->get_instance_value('item_ratio')['size'] > 0.66) ?  ' elementor-fit-height': ''; ?>">
+                <div class="elementor-post__thumbnail <?php echo ($this->get_instance_value('pss_item_ratio')['size'] > 0.66) ?  ' elementor-fit-height': ''; ?>">
                     <img
                         width="<?php echo get_option($settings[$skin.'_thumbnail_size_size'] . '_size_w')|750;?>"
                         height="<?php echo get_option($settings[$skin.'_thumbnail_size_size'] . '_size_h')|500;?>"
@@ -704,4 +704,5 @@ class Skinss_Cards extends Skinss_Base {
 
         $this->render_post_wrapper_end();
     }
+
 }
