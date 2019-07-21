@@ -17,8 +17,8 @@ If you like it please star it. and please give feedback and report issue if any.
 ### A video demo the plugin LOL :stuck_out_tongue_winking_eye:
 
 <div align="left">
-  <a href=https://youtu.be/m3Usy1e2i2k" >
-    <img src="https://youtu.be/m3Usy1e2i2k/0.jpg" alt="demo">
+  <a href=https://www.youtube.com/watch?v=m3Usy1e2i2k" >
+    <img src="https://www.youtube.com/watch?v=m3Usy1e2i2k/0.jpg" alt="demo">
   </a>
 </div>
 
