@@ -14,7 +14,8 @@
 /* .sitha-3000{
     animation-duration: 3s;
 } */
-.current, .disabled {
+nav button.current, nav button.disabled {
+    z-index: 500;
     cursor: default;
 
 }
