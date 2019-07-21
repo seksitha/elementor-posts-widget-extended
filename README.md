@@ -18,7 +18,7 @@ If you like it please star it. and please give feedback and report issue if any.
 
 <div align="left">
   <a href=https://www.youtube.com/watch?v=m3Usy1e2i2k" >
-    <img src="https://www.youtube.com/watch?v=m3Usy1e2i2k/0.jpg" alt="demo">
+    <img src="http://img.youtube.com/vi/m3Usy1e2i2k/0.jpg" alt="demo">
   </a>
 </div>
 
