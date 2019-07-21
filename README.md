@@ -1,13 +1,15 @@
 # Extended Elementor posts widget with Ajax AngularJs
 ## Why I do it myself
-use elementor pro to build a site. a few bugs and lack of features with posts widget bothers me. To my curiosity and a learning experience, Why not fixing that bugs and add my own needs. After three weeks, from knowing little to a fully custom plugin. the project is really rewarded:smiley: 
+use elementor pro to build a site. a few bugs and lack of features with posts widget bothers me. \
+This solve 2 years of [elementor pro request](https://github.com/elementor/elementor/issues/1284) that's not getting fixed\
+To my curiosity and a learning experience, Why not fixing that bugs and add my own needs. After three weeks, from knowing little to a fully custom plugin. the project is really rewarded:smiley: 
 
 
 
 ## let's get to the widget (It's free for everyone)
 
 you can just download the project file with the zip file and install it to your Wordpress site. 
-look for `jaxer element` in the basic category name `Pss`. activate and enjoy!!!
+look for `jaxer element` in the basic category name `Jaxer Posts`. activate and enjoy!!!
 
 If you like it please star it. and please give feedback and report issue if any.
 
@@ -22,6 +24,5 @@ If you like it please star it. and please give feedback and report issue if any.
 
 ## I'm open for the job opportunity as a self-taught :bowtie:
 I’m a self-taught. So this is a learning experience and it is a really satisfying result. Printing 3000 lines of code trying to understand the widget from the ground up and using AngularJS to add functionality. This is what I like to do. 
-contact me if you curious about who I am as a coder : seksitha@gmail.com.
-
+contact me if you curious about who I am as a coder : seksitha@gmail.com.\
 If you're really appreciate my work send a few bugs to my Paypal with email above. :pray:
