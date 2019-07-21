@@ -1,5 +1,5 @@
 # Extended Elementor posts widget with Ajax AngularJs
-## How I do it myself
+## Why I do it myself
 use elementor pro to build a site. a few bugs and lack of features with posts widget bothers me. To my curiosity and a learning experience, Why not fixing that bugs and add my own needs. After three weeks, from knowing little to a fully custom plugin. the project is really rewarded:smiley: 
 
 
