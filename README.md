@@ -25,4 +25,4 @@ If you like it please star it. and please give feedback and report issue if any.
 ## I'm open for the job opportunity as a self-taught :bowtie:
 I’m a self-taught. So this is a learning experience and it is a really satisfying result. Printing 3000 lines of code trying to understand the widget from the ground up and using AngularJS to add functionality. This is what I like to do. 
 contact me if you curious about who I am as a coder : seksitha@gmail.com.\
-If you're really appreciate my work send a few bucks to my Paypal with email above. :pray:
+If you're really appreciate my work send me the link of the website that use this plugin with email above. for my job seeking reference. :pray:
