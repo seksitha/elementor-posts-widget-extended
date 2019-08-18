@@ -1,4 +1,4 @@
-// [TODO:]  
+// [TODO:]  $P$Bc1151cnCElHiX65PubTqkhL8Ti3RR.
 // [Future] : url string for copy, refactor php string to php partial
 // [Done:]  image ration, animation child(by adding new animate control) not parent, and avata, 
 //          take out editor angular render animation duration, button next prev, button background, 
@@ -22,8 +22,17 @@
 				return new Date(date.replace(/\s/, 'T')+'Z');
             };
 
-			$scope.getPost = function(options,disableState,nav) {
-                if(disableState) return;
+			$scope.getPost = function(options,nav) {
+                // check if the current page is the same as paged then stop the rest of coe
+                if($scope["_" + options.id + '_class']){
+                   if($scope["_" + options.id + '_class'].current == options.paged){
+                       return
+                   }
+                }else{
+                    if(options.current_page==options.paged|nav=="prev"){
+                        return;
+                    }
+                }
                 // decliar global variable
                 var elParent = document.querySelector("[data-id='" + options.id + "']")
                 var elHeight = elParent.clientHeight - document.querySelector("[data-id='" + options.id + "'] nav").clientHeight ;
@@ -93,11 +102,9 @@
                  */
 
                 if(options.pagination_type === 'numbers'){
-                    
-				
                     // this line can not go on top or we can't calculate the hight
                     // remove element once when the element is from serverside but for angular just replace the data  
-                    document.querySelectorAll(".server-side__"+options.id).forEach(function(el) {
+                    $.each(document.querySelectorAll(".server-side__"+options.id),function(i,el) {
                         el.remove();
                     });
 
@@ -115,7 +122,6 @@
                     
                     // on click assignment
                     // delair current_page scope if already defined dont define, just use it
-
                     if (!$scope["_" + options.id + '_class']) {
                         $scope["_" + options.id + '_class'] = {}
                         $scope["_" + options.id + '_class'].data = []

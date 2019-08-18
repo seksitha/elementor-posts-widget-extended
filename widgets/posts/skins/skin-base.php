@@ -999,41 +999,6 @@ abstract class Skinss_Base extends Elementor_Skin_Base
         }
 
         $this->parent->add_render_attribute('pagination', 'class', 'elementor-pagination');
-
-        // $has_numbers = in_array($parent_settings['pagination_type'], ['numbers', 'numbers_and_prev_next']);
-        // $has_prev_next = in_array($parent_settings['pagination_type'], ['prev_next', 'numbers_and_prev_next']);
-
-        // $links = [];
-
-        // if ($has_numbers) {
-        //     $paginate_args = [
-        //         'type' => 'array',
-        //         'current' => $this->parent->get_current_page(),
-        //         'total' => $page_limit,
-        //         'prev_next' => false,
-        //         'show_all' => 'yes' !== $parent_settings['pagination_numbers_shorten'],
-        //         'before_page_number' => '<span class="elementor-screen-only">' . __('Page', 'jaxer-element') . '</span>',
-        //     ];
-
-        //     if (is_singular() && !is_front_page()) {
-        //         global $wp_rewrite;
-        //         if ($wp_rewrite->using_permalinks()) {
-        //             $paginate_args['base'] = trailingslashit(get_permalink()) . '%_%';
-        //             $paginate_args['format'] = user_trailingslashit('%#%', 'single_paged');
-        //         } else {
-        //             $paginate_args['format'] = '?page=%#%';
-        //         }
-        //     }
-
-        //     $links = paginate_links($paginate_args);
-        // }
-
-        // if ($has_prev_next) {
-        //     $prev_next = $this->parent->get_posts_nav_link($page_limit);
-        //     array_unshift($links, $prev_next['prev']);
-        //     $links[] = $prev_next['next'];
-        // } 
-        
         ?>
         
         <nav class="ajax elementor-pagination" role="navigation" aria-label="<?php esc_attr_e('Pagination', 'jaxer-element'); ?>">
@@ -1053,24 +1018,27 @@ abstract class Skinss_Base extends Elementor_Skin_Base
                 'category' => $parent_settings['posts_category_ids'],
                 'tags' => $parent_settings['posts_post_tag_ids'],
                 'format' => $parent_settings['posts_post_format_ids'],
-                'excerpt_length' => $this->get_instance_value('excerpt_length')
+                'excerpt_length' => $this->get_instance_value('excerpt_length'),
+                'current_page' => 1
             ];
             // echo '<pre>';
             // print_r($parent_settings);
             if ('numbers' === $parent_settings['pagination_type']) {
-
-                echo "<button ng-click='getPost(" . json_encode($param) . ", _".$id ."_class.current == 1 || !_". $id ."_class.current" . ",\"prev\" )' 
+                $param['paged'] = 1;
+                echo "<button ng-click='getPost(" . json_encode($param) . ",\"prev\" )' 
                 
                 class='page-numbers {{_". $id ."_class.current == 1 ? \" disabled\":null}}  {{!_". $id ."_class.current ? \" disabled\":null}} ' ><i class='fas fa-angle-left'></i></button>";
             
                 for ($i = 1; $i <= $page_limit; $i++) {
                     $param['paged'] = $i;
+
                     if($parent_settings['pagination_numbers_shorten'] !== 'yes'){
+
                         if ( \Elementor\Plugin::$instance->editor->is_edit_mode() ) {
                             echo "<button class='page-numbers '> $i </button>";
                         } else{
                             echo "<button ng-cloak ng-click='getPost(" . 
-                            json_encode($param) . ",_" . $id ."_class.current == $i || ($i ==1 && !_" . $id ."_class.current)" . ",\"paged\")' 
+                            json_encode($param) . ",\"paged\")' 
     
                             class='page-numbers {{_". $id ."_class.current == $i ? \"current disabled\":null}}
                             {{!_". $id ."_class.current && $i == 1  ? \"current disabled\":null}}'>" . $i . '</button>';
@@ -1088,10 +1056,11 @@ abstract class Skinss_Base extends Elementor_Skin_Base
                 } 
 
 
-                echo "<button ng-click='getPost(" . json_encode($param) . ",_" . $id ."_class.current == $page_limit" . ",\"next\")' 
+                echo "<button ng-click='getPost(" . json_encode($param) . ",\"next\")' 
                 class='page-numbers {{_". $id ."_class.current == $page_limit ? \"disabled\":null}}'> <i class='fas fa-angle-right'></i></button>";
             
             }
+            
             if ('load_more' === $parent_settings['pagination_type']) {
                 $param['paged'] = 2;
                 if ( \Elementor\Plugin::$instance->editor->is_edit_mode() ) {
