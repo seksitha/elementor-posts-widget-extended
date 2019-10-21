@@ -1,4 +1,4 @@
-// [TODO:]  $P$Bc1151cnCElHiX65PubTqkhL8Ti3RR.
+// [TODO:]  
 // [Future] : url string for copy, refactor php string to php partial
 // [Done:]  image ration, animation child(by adding new animate control) not parent, and avata, 
 //          take out editor angular render animation duration, button next prev, button background, 
